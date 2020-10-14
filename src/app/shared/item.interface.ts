@@ -4,17 +4,13 @@
 // ; Author: Professor Krasso
 // ; Modified By: Jonathan Kobyluck
 // ; Data: 7 October 2020
-// ; Description: app component
+// ; Description: item interface
 // ;===========================================
 // */
 
-import { Component } from '@angular/core';
+import { ObjectUnsubscribedError } from 'rxjs';
 
-@Component({
-  selector: 'app-root',
-  template: `<router-outlet></router-outlet>`,
-  styles: [``]
-})
-export class AppComponent {
-
+export interface Item {
+  _id: string;
+  text: string;
 }

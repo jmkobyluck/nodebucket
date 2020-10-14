@@ -2,3 +2,15 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.menu-spacer {
+  margin: auto;
+}
+
+.navbar-spacer {
+  margin-top: 100px;
+}
+
+.navbar {
+  padding: 0 20%;
+}

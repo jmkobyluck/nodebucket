@@ -1,0 +1,16 @@
+h1, h4 {
+  text-align: center;
+  font-style: oblique;
+}
+
+h1 {
+  font-size: xx-large;
+}
+
+h4 {
+  font-size: large;
+}
+
+.image {
+  margin: auto;
+}

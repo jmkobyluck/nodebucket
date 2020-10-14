@@ -1,0 +1,40 @@
+<div class="sign-in-card" fxLayout="column">
+  <mat-card fxFlex class="mat-elevation-z8">
+    <mat-card-title> Employee Sign-In Page </mat-card-title>
+    <mat-card-subtitle>
+      You must enter a valid employeeID to proceed
+    </mat-card-subtitle>
+    <form [formGroup]="form" (ngSubmit)="login(); form.reset()">
+      <mat-card-content>
+        <mat-card class="mat-elevation-z0" fxLayout="column" fxLayoutGap="10px">
+          <mat-form-field fxFlex appearance="fill">
+            <input
+              matInput
+              [formControl]="form.controls['empId']"
+              placeholder="Employee ID"
+            />
+            <mat-error
+              *ngIf="form.controls['empId'].hasError('required')"
+            ></mat-error>
+          </mat-form-field>
+        </mat-card>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <button
+          type="submit"
+          fxFlex
+          mat-raised-button
+          [disabled]="!form.valid"
+          (click)="login()"
+          color="primary"
+        >
+          Sign-In
+        </button>
+      </mat-card-actions>
+      <mat-error *ngIf="form.hasError">
+        {{ error }}
+      </mat-error>
+    </form>
+  </mat-card>
+</div>

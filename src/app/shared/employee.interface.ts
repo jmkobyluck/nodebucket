@@ -4,17 +4,14 @@
 // ; Author: Professor Krasso
 // ; Modified By: Jonathan Kobyluck
 // ; Data: 7 October 2020
-// ; Description: app component
+// ; Description: employee interface
 // ;===========================================
 // */
 
-import { Component } from '@angular/core';
+import { Item } from './item.interface';
 
-@Component({
-  selector: 'app-root',
-  template: `<router-outlet></router-outlet>`,
-  styles: [``]
-})
-export class AppComponent {
-
+export interface Employee {
+  empId: string;
+  todo: Item[];
+  done: Item[];
 }
